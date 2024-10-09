@@ -148,7 +148,7 @@ public class Janino extends BaseStep implements StepInterface {
 
             // See if the value is being used in a formula...
             //
-            if ( meta.getFormula()[m].getFormula().contains( valueMeta.getName() ) ) {
+            if (meta.getFormula()[m].getFieldName().equalsIgnoreCase( valueMeta.getName() ) ) {
               // If so, add it to the indexes...
               argIndexes.add( i );
 
